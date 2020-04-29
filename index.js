@@ -242,10 +242,13 @@ return result
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(stringSmash) {
 
+    function stringSmash(strings){
 
-  stringSmash.reduce((accumulator, currentElement ) => { return accumulator + currentElement; })
+    // const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    return strings.reduce((accumulator, currentValue) => accumulator + currentValue)
+
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -263,25 +266,64 @@ function stringSmash(stringSmash) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
-}
+// function getFullNames(runners) {
 
-/**
- * ### Challenge `firstNamesAllCaps`
- * 
- * @instructions
- * The event director needs to have all the runners' first names 
- * in uppercase because the director BECAME DRUNK WITH POWER.
- * Implement this function using map().
- * 
- * @param runners array of runners like the one inside the /data/runners.js file.
- * @returns an array with all the runners' first names in ALL CAPS.
- * The first names appear in the array in the same order the runners appear in the `runners` array.
-*/
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
-}
+
+//   let container = [];
+
+//   function callback(items){
+
+//     container.push(items.last_name + ', '+ items.first_name)
+//   }  
+
+//     runners.forEach(callback);
+//     return container
+
+// }
+
+    function getFullNames(runners){
+    const result = [];
+    runners.forEach(item => runners.push(`${item.last_name}, ${item.first_name}`));
+    return result;
+  }
+
+// /**
+//  * ### Challenge `firstNamesAllCaps`
+//  * 
+//  * @instructions
+//  * The event director needs to have all the runners' first names 
+//  * in uppercase because the director BECAME DRUNK WITH POWER.
+//  * Implement this function using map().
+//  * 
+//  * @param runners array of runners like the one inside the /data/runners.js file.
+//  * @returns an array with all the runners' first names in ALL CAPS.
+//  * The first names appear in the array in the same order the runners appear in the `runners` array.
+//  * 
+//  * 
+//  * 
+//  *
+
+
+// var array = ["melon","banana","apple","orange","lemon"];
+
+
+// array = array.map(function(x){ return x.toUpperCase() })
+
+// console.log(array)
+
+
+function firstNamesAllCaps(strings) {
+
+
+  strings.map(function(item){ return item.first_name.toUpperCase() })
+ 
+ 
+   }
+  
+
+
+
+
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
@@ -297,9 +339,12 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+ 
+ 
+  return
 }
+
 
 /**
  * ### Challenge `tallyUpDonations`
@@ -312,9 +357,33 @@ function getRunnersByTShirtSize(/* CODE HERE */) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations() {
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////// CLOSURES ///////////////
 /////////////// CLOSURES ///////////////
