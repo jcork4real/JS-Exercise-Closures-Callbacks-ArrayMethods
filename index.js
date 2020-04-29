@@ -303,26 +303,12 @@ return result
 //  * 
 //  *
 
-
-// var array = ["melon","banana","apple","orange","lemon"];
-
-
-// array = array.map(function(x){ return x.toUpperCase() })
-
-// console.log(array)
-
-
-function firstNamesAllCaps(strings) {
-
-
-  strings.map(function(item){ return item.first_name.toUpperCase() })
- 
- 
-   }
-  
-
-
-
+function firstNamesAllCaps(runners) {
+  const result = runners.map((item) => {
+    return `${item.first_name.toUpperCase()}`
+  });
+  return result;
+}
 
 
 /**
